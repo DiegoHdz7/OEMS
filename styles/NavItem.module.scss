@@ -1,0 +1,15 @@
+@import "public/ontario-design-system/styles/sass/variables/colours.variables.scss";
+//variables 
+$dark-BG: #1a1a1a;
+
+
+.ontarioLogo {
+   
+    width: 180px;
+    height: 46px;
+}
+
+#navbar{
+    background-color: $dark-BG;
+
+}
