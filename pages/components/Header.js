@@ -7,46 +7,86 @@ import NavItem from './NavItem'
 
 //Imported styles
 
+//NOTE!!!!!!!!! for using kebab-case scss classes we need to use styles['login-button'] notation
+
 
 //Imported Logos
 import OntarioDesktopLogo from '/public/ontario-design-system/logos/ontario-logo--desktop.svg'
 import OntarioSearchIcon from '/public/ontario-design-system/icons/svg/ontario-icon-search.svg'
+import MenuIcon from '/public/ontario-design-system/icons/svg/ontario-icon-menu.svg'
 
 
 export default function header() {
   return (
-    <div className={styles.ODSContainer} >
 
-     
-
-      <div className={styles.warningTop}>
+    <div>
 
 
+      <div className={styles['ontario-header']}>
 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 21H23L12 2L1 21ZM13 18H11V16H13V18ZM13 14H11V10H13V14Z" fill="white" />
-          <rect x="11" y="10" width="2" height="4" fill="black" />
-          <rect x="11" y="16" width="2" height="2" fill="black" />
-        </svg>
-        <p>Follow the COVID-19 restrictions and public health measures and book your appointment to get vaccinated.</p>
+
+        <div className={styles['ontario-header__logo-container']}>
+
+          <a href="#" >
+            <img src='/ontario-design-system/logos/ontario-logo--desktop.svg' alt="Ontario Logo"></img>
+          </a>
+
+        </div>
+
+        <div className={styles['ontario-row']}>
+
+          <div className={styles['ontario-header__search-container']}>
+            <form >
+              <label for="search-input-field"></label>
+              <input required type={'text'} name="query" className={styles['ontario-header__search-input']} id="search-input-field" />
+              <input type={'reset'} className={styles['ontario-header__search-reset']} id="search-reset" />
+
+
+              <button className={styles['ontario-header__search-submit']}>
+                <img src='/ontario-design-system/icons/svg/ontario-icon-search.svg' alt='Search Button Icon' />
+
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+
+
+
+        <div className={styles['ontario-header__nav-right-container']}>
+          <div className={styles['ontario-header__language-toggler']}>
+            <a href="#" class="language-link" hreflang="fr" data-drupal-link-system-path="node/9945">Français</a>
+          </div>
+
+
+
+          <button class={styles['ontario-header-button--with-outline']} id="header-menu-toggler" aria-controls="navigation" aria-label="open menu" type="button">
+
+            <div className={styles['ontario-row']}>
+              <MenuIcon className={styles['svg']} />
+              <span>Menu</span>
+
+            </div>
+
+
+          </button>
+
+        </div>
+
 
       </div>
-
-      <div className='.ontario-header'>
-      <a  href="#" > <OntarioDesktopLogo className={styles.ontarioLogo}/></a>
-      <div >
-           <input type={"text"}></input>
-            <button> <OntarioSearchIcon/> </button>
-
-           </div>
-
-      </div>
-
-      <NavItem/>
-
-     
-
 
     </div>
+
+
+
+
+
+
+
+
   )
 }

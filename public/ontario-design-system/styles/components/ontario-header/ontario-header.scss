@@ -15,6 +15,7 @@ $ontario-header-logo-width--mobile: 45px;
     background-color: $ontario-colour-black;
     color: $ontario-colour-white;
     display: flex;
+    
     align-items: center;
     height: 5.75rem;
 
@@ -69,8 +70,9 @@ $ontario-header-logo-width--mobile: 45px;
         padding-right: math.div(2rem, 2);
     }
 }
+//.ontario-header__search-input.ontario-input
 
-.ontario-header__search-input.ontario-input {
+.ontario-header__search-input {
     border-width: 0;
     margin-bottom: $spacing-0;
     height: $standard-input-height;
@@ -175,7 +177,7 @@ input[type="reset"].ontario-header__search-reset {
     margin: $spacing-0;
     padding: $spacing-2;
 
-    background-image: url(../icons/ontario-icons-close.svg);
+    background-image: url(/ontario-design-system/styles/components/icons/ontario-icons-close.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-color: transparent;
