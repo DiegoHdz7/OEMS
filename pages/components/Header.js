@@ -5,6 +5,13 @@ import NavItem from './NavItem'
 
 //ontario-icon-critical-alert-warning
 
+//Imported styles
+
+
+//Imported Logos
+import OntarioDesktopLogo from '/public/ontario-design-system/logos/ontario-logo--desktop.svg'
+import OntarioSearchIcon from '/public/ontario-design-system/icons/svg/ontario-icon-search.svg'
+
 
 export default function header() {
   return (
@@ -24,6 +31,17 @@ export default function header() {
         <p>Follow the COVID-19 restrictions and public health measures and book your appointment to get vaccinated.</p>
 
       </div>
+
+      <div className='.ontario-header'>
+      <a  href="#" > <OntarioDesktopLogo className={styles.ontarioLogo}/></a>
+      <div >
+           <input type={"text"}></input>
+            <button> <OntarioSearchIcon/> </button>
+
+           </div>
+
+      </div>
+
       <NavItem/>
 
      
